@@ -78,7 +78,7 @@ table.tbl{width:100%;border-collapse:collapse;min-width:720px}
 
 /* ---------- kanban ---------- */
 .board{display:flex;gap:14px;overflow-x:auto;padding-bottom:10px;align-items:flex-start;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
-.col{flex:1 0 188px;max-width:320px;background:#F0EEED;border-radius:8px;padding:10px;scroll-snap-align:start;min-height:120px}
+.col{flex:1 1 170px;min-width:170px;max-width:320px;background:#F0EEED;border-radius:8px;padding:10px;scroll-snap-align:start;min-height:120px}
 .col.over{outline:2px dashed var(--red);outline-offset:-2px}
 .col h3{font-size:13.5px;font-weight:700;display:flex;justify-content:space-between;align-items:center;padding:2px 4px 10px;color:var(--ink-2)}
 .col h3 small{font-weight:600;color:var(--muted);font-size:12.5px}
