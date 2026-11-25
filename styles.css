@@ -24,7 +24,7 @@ a{color:inherit;text-decoration:none}
 .tabs a{padding:7px 14px;border-radius:var(--radius);color:var(--ink-2);font-weight:600;font-size:14.5px}
 .tabs a:hover{background:var(--grey-soft)}
 .tabs a.on{background:var(--red-soft);color:var(--red)}
-.top .me{font-size:13px;color:var(--muted);background:none;border:0;cursor:pointer;padding:6px 8px;border-radius:var(--radius)}
+.top .me{margin-inline-start:auto;font-size:13px;color:var(--muted);background:none;border:0;cursor:pointer;padding:6px 8px;border-radius:var(--radius)}
 .top .me:hover{background:var(--grey-soft)}
 .bottom-tabs{display:none}
 
@@ -78,7 +78,7 @@ table.tbl{width:100%;border-collapse:collapse;min-width:720px}
 
 /* ---------- kanban ---------- */
 .board{display:flex;gap:14px;overflow-x:auto;padding-bottom:10px;align-items:flex-start;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
-.col{flex:0 0 272px;background:#F0EEED;border-radius:8px;padding:10px;scroll-snap-align:start;min-height:120px}
+.col{flex:1 0 188px;max-width:320px;background:#F0EEED;border-radius:8px;padding:10px;scroll-snap-align:start;min-height:120px}
 .col.over{outline:2px dashed var(--red);outline-offset:-2px}
 .col h3{font-size:13.5px;font-weight:700;display:flex;justify-content:space-between;align-items:center;padding:2px 4px 10px;color:var(--ink-2)}
 .col h3 small{font-weight:600;color:var(--muted);font-size:12.5px}
@@ -95,7 +95,10 @@ table.tbl{width:100%;border-collapse:collapse;min-width:720px}
 /* ---------- record page ---------- */
 .crumb{font-size:13.5px;color:var(--muted);margin-bottom:10px}
 .crumb a:hover{color:var(--ink)}
-.page{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:34px 40px;max-width:900px}
+.page{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:34px 40px;max-width:900px;margin:0 auto}
+.crumb{max-width:900px;margin-inline:auto}
+input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+input[type=number]{-moz-appearance:textfield}
 .page-title{font-size:30px;font-weight:700;border:0;width:100%;background:none;padding:2px 0;line-height:1.25}
 .page-title:focus{outline:0}
 .page-title::placeholder{color:#C9C3C0}
@@ -166,7 +169,7 @@ input[type=checkbox].done{width:18px;height:18px;accent-color:var(--green);curso
   .props{grid-template-columns:104px 1fr}
   .props .k{font-size:13.5px}
   .field{max-width:none}
-  .col{flex-basis:82vw}
+  .col{flex:0 0 78vw;max-width:none}
   .drawer{width:100%}
   .timeline .u time{min-width:64px}
 }
