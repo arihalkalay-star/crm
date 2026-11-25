@@ -87,7 +87,9 @@ async function loadAll() {
   for (const r of [c, d, t, u]) if (r.error) throw r.error;
   S.clients = c.data; S.deals = d.data; S.tasks = t.data; S.updates = u.data; S.loaded = true;
 }
+const DEFAULTS = { clients: { status: "ליד", tags: [] }, deals: { stage: "ליד חדש", tags: [] }, tasks: { status: "לעשות", priority: "רגילה" }, updates: { kind: "הערה" } };
 async function insert(table, row) {
+  row = { ...DEFAULTS[table], ...row };
   const { data, error } = await sb.from(table).insert(row).select().single();
   if (error) { fail(error); return null; }
   table === "tasks" ? S[table].push(data) : S[table].unshift(data);
